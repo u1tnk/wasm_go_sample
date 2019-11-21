@@ -1,0 +1,15 @@
+goを入れて以下のコマンドで実行
+l
+GOOS=js GOARCH=wasm go build -o main.wasm
+
+goexecというgoのサーバを入れて
+
+goexec 'http.ListenAndServe(`:8080`, http.FileServer(http.Dir(`.`)))'
+
+http://localhost:8080 でアクセス
+
+ソース更新後は
+
+GOOS=js GOARCH=wasm go build -o main.wasm
+
+を実行してブラウザでスーパーリロードで
