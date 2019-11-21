@@ -1,5 +1,5 @@
 goを入れて以下のコマンドで実行
-l
+
 GOOS=js GOARCH=wasm go build -o main.wasm
 
 goexecというgoのサーバを入れて
